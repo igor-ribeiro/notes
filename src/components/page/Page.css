@@ -1,0 +1,13 @@
+.Page {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100%;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.Page-Content {
+  padding: 16px 0;
+  font-size: 1.2em;
+}
