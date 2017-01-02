@@ -1,0 +1,96 @@
+.Note-Header {
+  height: 56px;
+  will-change: transform;
+}
+
+.Note-Header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  color: #fff;
+}
+
+.Note-Header.Fixed {
+  z-index: 5;
+  overflow: hidden;
+}
+
+.Note-Header:after {
+  z-index: -1;
+  content: '';
+  display: block;
+  background: tomato;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .3s;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Note-Header.Fixed:after {
+  opacity: 1;
+}
+
+.Note-Header-Image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.Note-Header-Image:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+
+.Note-Header-Placeholder {
+  height: 200px;
+  width: 100%;
+}
+
+.Note-Header-Title {
+  margin: 0;
+  line-height: 1em;
+  font-weight: 900;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.Note-Sentence {
+  display: block;
+}
+
+.Note-Content {
+  background: #fff;
+  position: relative;
+  will-change: transform;
+  z-index: 1;
+  padding: 12px;
+}
+
+.Note-Header-Icon {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2em;
+  margin-right: 12px;
+  width: 48px;
+  text-align: center;
+}
