@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import NotesListPage from './pages/NotesListPage';
-import NotePage from './pages/NotePage';
+import Note from './components/note/Note';
 
 const notes = [
   { title: 'Um homem precisa crescer?', url: 'um-homem-precisa-crescer', date: '2016/12/01', image: 'https://static.pexels.com/photos/207/fishing-sea-nature-man.jpg', content: [
@@ -72,7 +72,7 @@ class App extends Component {
       }
 
       return (
-        <NotePage
+        <Note
           redirect={this.redirect}
           note={note}/>
       );
@@ -88,7 +88,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.renderPage()}
+        {notes.map((note) => (
+          <Note note={note} key={note.url}/>
+        ))}
       </div>
     );
   }

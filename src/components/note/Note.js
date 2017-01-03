@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './NotePage.css';
+import './Note.css';
 
 
-class NotePage extends Component {
+class Note extends Component {
   constructor() {
     super();
 
@@ -17,11 +17,11 @@ class NotePage extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.handleScroll);
+    // document.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.handleScroll);
+    // document.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll() {
@@ -53,27 +53,20 @@ class NotePage extends Component {
 
     return (
       <div className="Note">
-        <div className="Note-Header-Placeholder"></div>
-        <header className={`Note-Header ${this.state.headerFixed ? 'Fixed': ''}`}>
-          <div className="Note-Header-Image" style={{ backgroundImage: `url(${note.image})` }}></div>
+        <header className="Note-Header" style={{ backgroundImage: `url(${note.image})` }}>
           <div className="App-Wrapper">
-            <div
-              className="Note-Header-Icon"
-              onClick={() => redirect('/')}>
-              &larr;
-            </div>
             <h1 className="Note-Header-Title">{note.title}</h1>
           </div>
         </header>
 
-        <main className="Note-Content">
-          <div className="App-Wrapper">
+        <div className="App-Wrapper">
+          <main className="Note-Content">
             {note.content.map(this.renderNoteParagraph)}
-          </div>
-        </main>
+          </main>
+        </div>
       </div>
     );
   }
 }
 
-export default NotePage;
+export default Note;

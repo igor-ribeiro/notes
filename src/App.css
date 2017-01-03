@@ -9,9 +9,21 @@
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1000px) {
+  .App-Wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .App-Wrapper {
+    width: 70%;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .App-Wrapper {
-    width: 50%;
+    width: 80%;
   }
 }
 
