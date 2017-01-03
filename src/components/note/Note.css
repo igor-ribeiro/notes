@@ -61,6 +61,13 @@
   padding: 12px 24px;
 }
 
+.Note-Content-Footer {
+  text-align: right;
+  border-top: 1px solid #ddd;
+  color: #888;
+  padding: 12px 0 0 0;
+}
+
 @media screen and (min-width: 800px) {
   .Note-Image {
     height: 100%;
@@ -69,7 +76,6 @@
   .Note-Header-Title {
     font-size: 1.6rem;
   }
-
 
   .Note-Content:before,
   .Note-Content:after {

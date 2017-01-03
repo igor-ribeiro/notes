@@ -64,6 +64,8 @@ class Note extends Component {
           <div className="App-Wrapper">
             <div className="Note-Content-Inner">
               {note.content.map(this.renderNoteParagraph)}
+
+              <footer className="Note-Content-Footer">{note.date}</footer>
             </div>
           </div>
         </main>
