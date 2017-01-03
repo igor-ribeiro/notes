@@ -53,17 +53,20 @@ class Note extends Component {
 
     return (
       <div className="Note" id={`/${note.url}`}>
-        <header className="Note-Header" style={{ backgroundImage: `url(${image})` }}>
+        <figure className="Note-Image" style={{ backgroundImage: `url(${image})` }}></figure>
+        <header className="Note-Header">
           <div className="App-Wrapper">
             <h1 className="Note-Header-Title">{note.title}</h1>
           </div>
         </header>
 
-        <div className="App-Wrapper">
-          <main className="Note-Content">
-            {note.content.map(this.renderNoteParagraph)}
-          </main>
-        </div>
+        <main className="Note-Content">
+          <div className="App-Wrapper">
+            <div className="Note-Content-Inner">
+              {note.content.map(this.renderNoteParagraph)}
+            </div>
+          </div>
+        </main>
       </div>
     );
   }

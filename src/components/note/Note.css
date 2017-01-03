@@ -1,3 +1,7 @@
+.Note {
+  position: relative;
+}
+
 .Note-Header {
   padding: 0 24px;
   will-change: transform;
@@ -5,12 +9,24 @@
   display: flex;
   align-items: center;
   height: 128px;
-  background-size: cover;
-  background-position: center center;
   position: relative;
+  z-index: 1;
 }
 
-.Note-Header:after {
+.Note-Image {
+  width: 100%;
+  height: 128px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.Note-Image:after {
   position: absolute;
   content: '';
   display: block;
@@ -34,24 +50,45 @@
 }
 
 .Note-Content {
+  z-index: 1;
+  position: relative;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.Note-Content-Inner {
   background: #fff;
-  will-change: transform;
   padding: 12px 24px;
 }
 
 @media screen and (min-width: 800px) {
-  .Note-Header {
-    padding: 54px 12px;
-    align-items: flex-start;
-    height: 300px;
-  }
-
-  .Note-Content {
-    transform: translateY(-150px);
-    margin-bottom: -120px;
+  .Note-Image {
+    height: 100%;
   }
 
   .Note-Header-Title {
     font-size: 1.6rem;
+  }
+
+
+  .Note-Content:before,
+  .Note-Content:after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(156px);
+    z-index: -1;
+  }
+
+  .Note-Content:before {
+    left: 0;
+  }
+
+  .Note-Content:after {
+    right: 0;
   }
 }
