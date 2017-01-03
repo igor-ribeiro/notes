@@ -6,27 +6,8 @@ class Note extends Component {
   constructor() {
     super();
 
-    this.handleScroll = this.handleScroll.bind(this);
     this.renderNoteParagraph = this.renderNoteParagraph.bind(this);
     this.renderNoteSentence = this.renderNoteSentence.bind(this);
-
-    this.state = {
-      headerFixed: false,
-    };
-  }
-
-  componentDidMount() {
-    // document.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    // document.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll() {
-    const headerFixed = document.body.scrollTop >= 144;
-
-    this.setState({ headerFixed });
   }
 
   renderNoteSentence(sentence, index) {
@@ -48,7 +29,7 @@ class Note extends Component {
   }
 
   render() {
-    const { note, redirect } = this.props;
+    const { note } = this.props;
     const image = require(`./../../images/${note.url}.jpg`);
 
     return (
