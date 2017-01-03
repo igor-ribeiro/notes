@@ -15,3 +15,4 @@ build
 *.swp
 *.swo
 npm-debug.log
+yarn-error.log
