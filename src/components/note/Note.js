@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import './Note.css';
 
-
 class Note extends Component {
   constructor() {
     super();
@@ -50,10 +49,11 @@ class Note extends Component {
 
   render() {
     const { note, redirect } = this.props;
+    const image = require(`./../../images/${note.url}.jpg`);
 
     return (
       <div className="Note">
-        <header className="Note-Header" style={{ backgroundImage: `url(${note.image})` }}>
+        <header className="Note-Header" style={{ backgroundImage: `url(${image})` }}>
           <div className="App-Wrapper">
             <h1 className="Note-Header-Title">{note.title}</h1>
           </div>
