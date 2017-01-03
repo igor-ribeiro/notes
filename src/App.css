@@ -15,13 +15,13 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1000px) {
   .App-Wrapper {
     width: 70%;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 900px) {
   .App-Wrapper {
     width: 80%;
   }
