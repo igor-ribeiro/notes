@@ -52,7 +52,7 @@ class Note extends Component {
     const image = require(`./../../images/${note.url}.jpg`);
 
     return (
-      <div className="Note">
+      <div className="Note" id={`/${note.url}`}>
         <header className="Note-Header" style={{ backgroundImage: `url(${image})` }}>
           <div className="App-Wrapper">
             <h1 className="Note-Header-Title">{note.title}</h1>
